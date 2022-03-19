@@ -15,14 +15,6 @@ export type PageInfo = Record<
 >
 
 /**
- * return first page path
- */
-export function getFirstPage(pages: Record<string, string>): string {
-  const firstPageName = Object.keys(pages)[0]
-  return `/${firstPageName}/index.html`
-}
-
-/**
  * @private
  */
 function genFileName(pageName: string, path: string): string {
@@ -144,7 +136,7 @@ export function getHistoryReWriteRuleList(options: MpaOptions): Rewrite[] {
     })
     list.push({
       from: new RegExp(`^/${pageName}/*`), // support pageName/{pages}
-      to
+      to,
     })
   })
   return list

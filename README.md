@@ -49,11 +49,6 @@ export default defineConfig({
 ```ts
 {
   /**
-   * open url path when server starts (customizable)
-   * @default path of first-page
-   */
-  open: string
-  /**
    * where to locate pages
    * @default 'src/pages', e.g. src/views
    */
